@@ -226,12 +226,12 @@ sudo systemctl enable --now minio
    **Створіть bucket:**
    Перейдіть у **Administrator** → **Buckets** та натисніть **Create Bucket**.
 
-![](04-minio-install-and-setting/image.png)
+![](04-minio-image/image.png)
 
 Вкажіть назву для bucket, наприклад: **uxp-messagelog**
 та натисніть **Create Bucket**.
 
-![](04-minio-install-and-setting/image2.png)
+![](04-minio-image/image2.png)
 
 2. ### Налаштування квоти для bucket
 
@@ -240,16 +240,16 @@ sudo systemctl enable --now minio
    **Встановіть жорстку квоту для bucket:**
    Перейдіть у **Administrator** → **Buckets** та натисніть на потрібному **bucket**.
 
-![](04-minio-install-and-setting/image3.png)
+![](04-minio-image/image3.png)
 
 На вкладці **Summary**, натисніть на **Quota** (іконка редагування).
 
-![](04-minio-install-and-setting/image4.png)
+![](04-minio-image/image4.png)
 
 — Ввімкніть перемикач у позицію **ON** та вкажіть необхідну **квоту**.
 — Далі, натисніть Save.
 
-![](04-minio-install-and-setting/image6.png)
+![](04-minio-image/image6.png)
 
 3. ### Налаштування правила життєвого циклу об’єкта
 
@@ -259,11 +259,11 @@ sudo systemctl enable --now minio
    — Перейдіть у **Administrator** → **Buckets** та натисніть на потрібному **bucket**.
    — Натисніть на вкладку **Lifecycle**, а потім на **Add Lifecycle Rule**.
 
-![](04-minio-install-and-setting/image7.png)
+![](04-minio-image/image7.png)
 
 — Вкажіть кількість днів, після яких дані мають вважатися протермінованими і видалятися.
 
-![](04-minio-install-and-setting/image8.png)
+![](04-minio-image/image8.png)
 
 4. ### Налаштування політик bucket
 
@@ -271,11 +271,11 @@ sudo systemctl enable --now minio
    **Створіть політику для bucket:**
    — Перейдіть у **Administrator** → **Policies** та натисніть **Create Policy**
 
-![](04-minio-install-and-setting/image9.png)
+![](04-minio-image/image9.png)
 
 — Вкажіть назву для політики, наприклад: **uxp-messagelog-policy**
 
-![](04-minio-install-and-setting/image10.png)
+![](04-minio-image/image10.png)
 
 — Опишіть політику для bucket (наприклад, uxp-messagelog) у вигляді на зразок такого:
 
@@ -294,7 +294,7 @@ sudo systemctl enable --now minio
 
 — Далі, натисніть **Save**.
 
-![](04-minio-install-and-setting/image11.png)
+![](04-minio-image/image11.png)
 
 5. ### Налаштування сервісного облікового запису для MinIO
 
@@ -303,39 +303,39 @@ sudo systemctl enable --now minio
 **Створіть сервісний обліковий запис для серверу безпеки:**
 — Перейдіть у **Administrator** → **Identity** → **Groups** та натисніть **Create Group**.
 
-![](04-minio-install-and-setting/image12.png)
+![](04-minio-image/image12.png)
 
 — Вкажіть назву для групи, наприклад: **uxp-security-servers**
 та натисніть **Save**.
 
-![](04-minio-install-and-setting/image13.png)
+![](04-minio-image/image13.png)
 — Натисніть на щойно створеній групі, потім перейдіть на вкладку **Policies** та натисніть **Set Policies**.
 
-![](04-minio-install-and-setting/image15.png)
+![](04-minio-image/image15.png)
 
 — Оберіть раніше створену політику, наприклад, **uxp-messagelog-policy**, та натисніть **Save**.
 
-![](04-minio-install-and-setting/image17.png)
+![](04-minio-image/image17.png)
 
 — Перейдіть у **Administrator** → **Identity** → **Users** та натисніть **Create User**.
 
-![](04-minio-install-and-setting/image18.png)
+![](04-minio-image/image18.png)
 
 — Вкажіть ім’я для користувача, наприклад: **uxp-security-server**
 \- **бажаний пароль**
 \- потім оберіть **раніше створену групу** та натисніть **Save**.
 
-![](04-minio-install-and-setting/image20.png)
+![](04-minio-image/image20.png)
 
 — Натисніть на щойно створеному користувачі, потім перейдіть на вкладку **Service Accounts** та натисніть **Create Access Key.**
 
-![](04-minio-install-and-setting/image21.png)
+![](04-minio-image/image21.png)
 
 > <span style="color:red;">Запишіть</span><span style="color:red;"> щойно створений ключ доступу та секретний ключ</span>, оскільки це єдиний раз, коли буде показано їх код.
 
 — Далі, натисніть **Create.**
 
-![](04-minio-install-and-setting/image22.png)
+![](04-minio-image/image22.png)
 
 # **Крок 4 :** Налаштування Серверу безпеки UXP
 
