@@ -226,12 +226,12 @@ sudo systemctl enable --now minio
    **Створіть bucket:**
    Перейдіть у **Administrator** → **Buckets** та натисніть **Create Bucket**.
 
-![](image.png){width=70%}
+![](04-minio-install-and-setting/image.png)
 
 Вкажіть назву для bucket, наприклад: **uxp-messagelog**
 та натисніть **Create Bucket**.
 
-![](image2.png){width=70%}
+![](image2.png)
 
 2. ### Налаштування квоти для bucket
 
@@ -240,16 +240,16 @@ sudo systemctl enable --now minio
    **Встановіть жорстку квоту для bucket:**
    Перейдіть у **Administrator** → **Buckets** та натисніть на потрібному **bucket**.
 
-![](image3.png){width=70%}
+![](image3.png)
 
 На вкладці **Summary**, натисніть на **Quota** (іконка редагування).
 
-![](image4.png){width=70%}
+![](image4.png)
 
 — Ввімкніть перемикач у позицію **ON** та вкажіть необхідну **квоту**.
 — Далі, натисніть Save.
 
-![](image6.png){width=70%}
+![](image6.png)
 
 3. ### Налаштування правила життєвого циклу об’єкта
 
@@ -259,11 +259,11 @@ sudo systemctl enable --now minio
    — Перейдіть у **Administrator** → **Buckets** та натисніть на потрібному **bucket**.
    — Натисніть на вкладку **Lifecycle**, а потім на **Add Lifecycle Rule**.
 
-![](image7.png){width=70%}
+![](image7.png)
 
 — Вкажіть кількість днів, після яких дані мають вважатися протермінованими і видалятися.
 
-![](image8.png){width=70%}
+![](image8.png)
 
 4. ### Налаштування політик bucket
 
@@ -271,11 +271,11 @@ sudo systemctl enable --now minio
    **Створіть політику для bucket:**
    — Перейдіть у **Administrator** → **Policies** та натисніть **Create Policy**
 
-![](image9.png){width=70%}
+![](image9.png)
 
 — Вкажіть назву для політики, наприклад: **uxp-messagelog-policy**
 
-![](image10.png){width=70%}
+![](image10.png)
 
 — Опишіть політику для bucket (наприклад, uxp-messagelog) у вигляді на зразок такого:
 
@@ -294,7 +294,7 @@ sudo systemctl enable --now minio
 
 — Далі, натисніть **Save**.
 
-![](image11.png){width=70%}
+![](image11.png)
 
 5. ### Налаштування сервісного облікового запису для MinIO
 
@@ -303,39 +303,39 @@ sudo systemctl enable --now minio
 **Створіть сервісний обліковий запис для серверу безпеки:**
 — Перейдіть у **Administrator** → **Identity** → **Groups** та натисніть **Create Group**.
 
-![](image12.png){width=70%}
+![](image12.png)
 
 — Вкажіть назву для групи, наприклад: **uxp-security-servers**
 та натисніть **Save**.
 
-![](image13.png){width=70%}
+![](image13.png)
 — Натисніть на щойно створеній групі, потім перейдіть на вкладку **Policies** та натисніть **Set Policies**.
 
-![](image15.png){width=70%}
+![](image15.png)
 
 — Оберіть раніше створену політику, наприклад, **uxp-messagelog-policy**, та натисніть **Save**.
 
-![](image17.png){width=70%}
+![](image17.png)
 
 — Перейдіть у **Administrator** → **Identity** → **Users** та натисніть **Create User**.
 
-![](image18.png){width=70%}
+![](image18.png)
 
 — Вкажіть ім’я для користувача, наприклад: **uxp-security-server**
 \- **бажаний пароль**
 \- потім оберіть **раніше створену групу** та натисніть **Save**.
 
-![](image20.png){width=70%}
+![](image20.png)
 
 — Натисніть на щойно створеному користувачі, потім перейдіть на вкладку **Service Accounts** та натисніть **Create Access Key.**
 
-![](image21.png){width=70%}
+![](image21.png)
 
 > <span style="color:red;">Запишіть</span><span style="color:red;"> щойно створений ключ доступу та секретний ключ</span>, оскільки це єдиний раз, коли буде показано їх код.
 
 — Далі, натисніть **Create.**
 
-![](image22.png){width=70%}
+![](image22.png)
 
 # **Крок 4 :** Налаштування Серверу безпеки UXP
 
