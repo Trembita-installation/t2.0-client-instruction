@@ -1,174 +1,246 @@
-# ЕТАП 1. Підготовчі дії
-
-* 1.1. ОС та вимоги, порти.
-
-| OC | RAM | ROM | CPU |
-| --- | --- | --- | --- |
-| Ubuntu Server 22.04 LTS (64-bit) | 4/16 | 40/200 | 2/4 |
-
-| **Порти** |  |  |  |  |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Вхідні |  | 4000 | 2082 | 80 | 443 | 4001 |  |  |  |  |
-| Вихідні |  | 514 | 9000 | 80 | 443 | 4001 | 10051 | 8080 | 9200 | 5500 |
+# Т2.0 ШБО інсталяція
+---
 
 
 
-# ЕТАП 2. Встановлення UXP
+# Крок 1. Підготовчі дії
 
-**2.1 Налаштування HOSTNAME :**
+| Вхідні порти (TCP) | Призначення | Область мережі |
+| --- | --- | --- |
+| 4000 | Доступ до вебінтерфейсу користувача | ПРИВАТНА |
+| 2082 | Використовується для прослуховування запитів сервісів щодо інформації про статус (необхідно лише у випадку використання внутрішнього балансувальника навантаження, щоб  розподіляти запити між вузлами кластеру серверу безпеки | ПРИВАТНА |
+| 80 | HTTP з’єднання від інформаційних систем | ПРИВАТНА |
+| 443 | HTTPS з’єднання від інформаційних систем | ПРИВАТНА |
+| 5500 | Обмін повідомленнями UXP між серверами безпеки | ВІДКРИТА |
+|  |  |  |
+| **Вихідні порти (TCP)** | **Призначення** |  |
+| 80 | HTTP з’єднання до інформаційних систем; оновлення програмного забезпечення; глобальна конфігурація; інші додаткові сервіси | ВІДКРИТА |
+| 443 | HTTPS з’єднання до інформаційних систем; other supplementary services | ВІДКРИТА |
+| 514 | З’єднання Syslog із сервером журналювання | ПРИВАТНА |
+| 9000 | З’єднання S3 із сервером архівування журналів повідомлень | ПРИВАТНА |
+| 4400 | Сервісні запити до Конектора UXP (необхідно лише при використанні Конектора UXP) | ПРИВАТНА |
+| 8080 | Віддалене налаштування серверу Zabbix (необхідно лише при використанні серверу Zabbix для локального моніторингу серверу безпеки | ПРИВАТНА |
+| 10051 | Передача даних моніторингу на сервер Zabbix (необхідно лише при використанні серверу Zabbix для локального моніторингу серверу безпеки | ПРИВАТНА |
+| 9200 | Передача даних операційного моніторингу на сервер Elasticsearch (RESTful API) (необхідно лише при використанні серверу Elasticsearch для локального моніторингу серверу безпеки | ПРИВАТНА |
+| 5500 | Обмін повідомленнями між серверами безпеки | ВІДКРИТА |
+| 4001 | Запити керування до сервера реєстрації | ВІДКРИТА |
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1.1.  Для перевірки імені хоста
 
-```c
-hostname -A 
-```
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1.2. Якщо імʼя хоста не співпадає:
+# Крок 2. Встановлення UXP
 
-```
+## 2.1. Налаштування `HOSTNAME`
+
+```bash
+hostname -A
 sudo hostnamectl set-hostname <your-hostname>
 ```
 
-**2.2. Додати ключ та репозиторій UXP**
+## 2.2. Додавання репозиторію UXP
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2.1. Закоментуйте репозиторії
-
-```
+```bash
 sudo sed -i 's/^[A-Za-z0-9]/#&/' /etc/apt/sources.list
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2.2. Додати актуальний репозиторій
-
-```
 echo 'deb https://project-repo.trembita.gov.ua:8081/repository/tr-2-pre-final/ jammy main' | sudo tee -a /etc/apt/sources.list
 ```
 
-![](зображення.png){width=70%}
+## 2.3. Встановлення UXP Security Server
 
-**2.3. Встановити сервер UXP**
-
-```
+```bash
 sudo apt update
 ```
 
-```
+```bash
 sudo apt install uxp-securityserver-trembita
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.1.  Натиснути "Y" щоб продовжити встановлення
+> ### **Під час встановлення:**
+>
+> * Натисніть `Y` для підтвердження
+> * Введіть **логін/пароль** для входу до веб-інтерфейсу:
+> * ![](05-uxp-ss-install-image/image11.png)
+> * ![](05-uxp-ss-install-image/image12.png)
+> * У наступному вікні натисніть **ʼʼNoʼʼ,** якщо MinIO не встановлено або не налаштовано. Ви зможете додати ці параметри після встановлення **ШБО** у файлі **local.ini**
+> * ![](05-uxp-ss-install-image/image13.png)
+> * Якщо MinIO встановлено, створені бакети та ключі, виберіть ʼʼ**Yesʼʼ** та додайте параметри MinIO:
+> * Введіть IP-адресу **MinIO** з портом **9000**
+> * ![](05-uxp-ss-install-image/image14.png)
+> * Введіть шлях до папки, яку Ви налаштували для зберігання
+> * ![](05-uxp-ss-install-image/image15.png)
+> * Введіть acces key створений на **MinIO**
+> * ![](05-uxp-ss-install-image/image16.png)
+> * Введіть secret key створений на **MinIO**
+> * ![](05-uxp-ss-install-image/image17.png)
+> * Вкажіть шлях до сертифікату, який був згенерований на MinIO
+> * ![](05-uxp-ss-install-image/image18.png)
+> * Далі натисніть ОК
+> * ![](05-uxp-ss-install-image/image19.png)
+> * В наступному вікні натисніть ОК
+> * В наступному теж натиснути ОК
+> * ![](05-uxp-ss-install-image/image20.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.2. Ввести користувача та пароль адміністратора
+# Крок 3. Контролер цілісності (AIDE)
 
-![](зображення1.png){width=70%}
+Запустіть встановлення контролера цілісності :
 
-![](зображення2.png)
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.3. **Вказати параметри MinIO: URL, bucket, access key, secret key**
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red;">(Якщо MinIO не був встановлений, можна пропустити цей крок і потім додати значення в файл local.ini)</span>
-
-![](зображення3.png){width=70%}
-
-![](зображення4.png){width=70%}
-
-(Замість \<ip-adress-or-hostname\> вказати дійсну ip minio  )
-
-
-
-2.3.4. Вказати імʼя bucket , який був створений на minio
-
-![](зображення5.png){width=70%}
-
-2.3.5.  Ввести access key
-
-![](зображення6.png)
-
-2.3.6. Ввести secret key
-
-![](зображення7.png)
-
-2.3.7. Вказати шлях до сертифікату
-
-![](зображення8.png){width=70%}
-
-2.3.8. Натиснути ОК
-
-![](зображення9.png){width=70%}
-
-2.3.9. Натиснути ОК
-
-![](зображення10.png)
-
-
-
----
-
-### 
-
-# ЕТАП 3. Контролер цілісності (AIDE)
-
-3.1. Встановлення контролю цілісності
-
-```
-sudo apt install uxp-integrity-securityserver 
+```bash
+sudo apt install uxp-integrity-securityserver
 ```
 
-3.2. Поставити uxp-integrity на паузу
+Поставте котролер цілісності на паузу :
 
 ```
-sudo uxp-integrity pause 
+sudo uxp-integrity pause
 ```
 
-3.3. Перейти до файлу allowed_hosts.conf  та додати ip
+Додайте ip-адресу **Адмін станції** до списку дозволених :
 
 ```
-nano /etc/uxp/nginx/allowed_hosts.conf
+sudo nano /etc/uxp/nginx/allowed_hosts.conf
 ```
 
-3.4. Зберегти файл та викнонати наступну команду
+Перевірте статус nginx командою :
 
 ```
-service nginx restart 
+sudo nginx -t
 ```
 
-3.5. Виконати оновлення uxp-integrity
+Якщо помилки не виявлені, виконайте наступну команду :
+
+```
+sudo service nginx restart
+```
+
+Далі оновіть контролер цілісності
 
 ```
 sudo uxp-integrity update
 ```
 
-3.6. Перевірка сервісів
+Наступною командою подивіться чи всі сервіси **uxp** активні
 
 ```
-systemctl status uxp-*
+sudo systemctl status uxp-*
 ```
 
-3.7. Перейдіть на сторінку https://ip-uxp:4000
+# Крок 4. Підключення криптографічного пристрою
 
+## 4.1. Підтримувані моделі
 
+* Шифр-HSM
+* Автор SecureToken-338
+* ІІТ Гряда-301
+* ІІТ Алмаз-1К
 
+## 4.2. Встановлення драйверів
 
+```bash
+sudo apt install pcscd libccid pcsc-tools libpcsclite opensc
+```
 
+## 4.3. Налаштування ІІТ Гряда-301
 
-
-Для підключення Гряди:
-
-
-
-sudo uxp-integrity pause
-
-sudo apt install pcscd libccid pcsc-tools libpcsclite1 opensc
-
-
-
+```bash
 sudo unzip -o -j NCMGryada301PKCS11Libs-Linux.zip -d /usr/share/uxp/lib/
+```
 
-sudo chown root:root /usr/share/uxp/lib/\*.so
+```
+sudo chown root:root /usr/share/uxp/lib/*.so
+```
 
-sudo chmod 644 /usr/share/uxp/lib/\*.so
+```
+sudo chmod 644 /usr/share/uxp/lib/*.so
+```
 
+Створіть `/usr/share/uxp/lib/osplm.ini`:
 
+```
+[\SOFTWARE\Institute of Informational Technologies Key Medias\NCM Gryada-301]
+[\SOFTWARE\...\Modules]
+[\SOFTWARE\...\Modules\<serial-number>]
+Order Number=0
+SN=<serial-number>
+Address=<device-address>
+AddressMask=<address-mask>
+```
 
-nano /usr/share/uxp/lib/osplm.ini
+```bash
+sudo chown root:root /usr/share/uxp/lib/osplm.ini
+```
 
+```
+sudo chmod 644 /usr/share/uxp/lib/osplm.ini
+```
 
+Перезапуск сервісів:
+
+```bash
+sudo systemctl restart uxp-securityserver-rest-api uxp-proxy
+```
+
+```
+sudo uxp-integrity update
+```
+
+## 4.4. Додавання пристрою через веб-інтерфейс
+
+1. Увійти до веб-інтерфейсу
+2. Перейти у **Криптографічні пристрої**
+3. Натиснути **Додати пристрій**
+4. Вибрати модель і слот
+5. Призначити токен учаснику
+
+# Крок 5. Встановлення доповнень
+
+## 5.1. Підтримка PKCS#11
+
+```bash
+sudo apt install uxp-addon-pkcs11
+```
+
+```bash
+chmod o+r <library>
+```
+
+```bash
+sudo su uxp -c 'pkcs11-tool -module <Library> -L'
+```
+
+# Крок 6. Ключі та сертифікати
+
+## 6.1. Імпорт сертифікатів з пристрою
+
+1. Перейти у **Ключі та сертифікати**
+2. Авторизуватись на токені
+3. **Імпорт сертифіката** → **З пристрою**
+
+## 6.2. Генерація CSR
+
+* Генерувати CSR для **підпису** (на токені пристрою)
+* Генерувати CSR для **автентифікації** (програмний токен)
+
+# Крок 7. Надсилання CSR
+
+Передайте обидва CSR до УЦ або ЦСК, додавши:
+
+* Key Usage:
+  * `Key Agreement` — автентифікація
+  * `Non Repudiation` — підпис
+* Серійний номер пристрою, модель, слот
+* Поля DN із веб-інтерфейсу
+
+# Крок 8. Імпорт сертифікатів
+
+# Через інтерфейс:
+
+```bash
+Ключі та сертифікати → Імпортувати → Зіставлення з ключами буде автоматичне
+```
+
+# Крок 9. Реєстрація сервера
+
+1. Перейти у **Ключі та сертифікати**
+2. Обрати сертифікат автентифікації
+3. Натиснути **Зареєструвати**
+4. Вказати DNS/IP сервера
+
+---
