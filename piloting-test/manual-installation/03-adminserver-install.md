@@ -48,7 +48,7 @@ sudo apt install uxp-integrity-admintool uxp-admintool-ubuntu
 6\. Після встановлення, ви можете знайти у меню "**Показати програми**" нову програму "**Admin Tool**" з іконкою Трембіти.
 Тож, щоб відкрити Засіб адміністрування, запустіть цю програму.
 
-![](03-adminserver-image/image1.png)
+![](image1.png){width=70%}
 
 # Windows Робоча станція адміністратора (Administration Tool)
 
@@ -65,3 +65,5 @@ sudo apt install uxp-integrity-admintool uxp-admintool-ubuntu
 2. Запустіть файл **ide_install.exe** з правами Адміністратора.
 
 3. Щоб відкрити Засіб адміністрування, запустіть його через ярлик **Admin Tool** на Робочому столі.
+
+   ![](image2.png){width=70%}
