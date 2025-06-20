@@ -123,7 +123,7 @@ sudo /usr/share/kibana/bin/kibana-verification-code
 > sudo /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic -i
 > ```
 
-![](07-elk-image/image2.png)
+<img src="07-elk-image/image2.png" width="500"/>
 
 ## Шифрування трафіку між веббраузером та Kibana
 
