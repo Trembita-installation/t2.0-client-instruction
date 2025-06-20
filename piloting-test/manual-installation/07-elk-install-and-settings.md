@@ -103,7 +103,7 @@ sudo /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kiban
 
 8. У вебінтерфейсі Kibana вставте щойно згенерований токен з терміналу і натисніть **Configure Elastic**.
 
-![](07-elk-images/image.png)
+![](07-elk-image/image.png)
 
 9. Отримайте код верифікації Kibana за допомогою такої команди:
 
@@ -111,7 +111,7 @@ sudo /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kiban
 sudo /usr/share/kibana/bin/kibana-verification-code
 ```
 
-![](07-elk-images/image1.png){width=450px}
+![](07-elk-image/image1.png){width=450px}
 
 10. У вебінтерфейсі Kibana вставте щойно отриманий код верифікації з терміналу і натисніть Verify.
 
@@ -124,7 +124,7 @@ sudo /usr/share/kibana/bin/kibana-verification-code
 > sudo /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic -i
 > ```
 
-![](07-elk-images/image2.png)
+![](07-elk-image/image2.png)
 
 ## Шифрування трафіку між веббраузером та Kibana
 
@@ -204,7 +204,7 @@ sudo systemctl restart kibana
 1. Створіть нову роль для користувача PMA, перейшовши у
    **Management** → **Stack Management** → **Security** → **Roles** та натиснувши **Create role**.
 
-![](07-elk-images/image6.png){width=70%}
+![](07-elk-image/image6.png){width=70%}
 
 1. Введіть:
    назву ролі, наприклад: **uxp_pma_client**
@@ -219,17 +219,17 @@ sudo systemctl restart kibana
    та оберіть необхідні привілеї: **create_index, manage, read, view_index_metadata, write**.
    Далі, натисніть **Create role**.
 
-   ![](07-elk-images/image10.png)
+   ![](07-elk-image/image10.png)
 
 4. Створіть нового користувача, перейшовши у **Management** → **Stack Management** → **Security** → **Users** та натиснувши **Create user.**
-   ![](07-elk-images/image11.png)
+   ![](07-elk-image/image11.png)
 
 5. Введіть:
    \- ім’я, наприклад: **uxp_pma**
    \- Введіть пароль
    \- і оберіть раніше створену роль, наприклад: **uxp_pma_client**
    Далі, натисніть **Create user**.
-   ![](07-elk-images/image12.png)
+   ![](07-elk-image/image12.png)
 
 ## Налаштування агента моніторингу (PMA)
 
@@ -346,7 +346,7 @@ sudo uxp-integrity update
 
 <span style="color:red;">*Створіть представлення даних для операційних даних, якщо необхідну інформацію було зібрано.*</span>
 
-![](07-elk-images/image14.png)
+![](07-elk-image/image14.png)
 
 > Під час імпорту прикладу інформаційної панелі або візуалізації UXP, автоматично створюється представлення даних uxp-visualizations-index для шаблону індексу даних операційного моніторингу uxp-request\*, разом з полем часу request_in_ts і додатковими скриптовими полями, які необхідні для візуалізацій. Для дослідження даних операційного моніторингу, ви можете використовувати це представлення даних або створити цілком нове.
 
@@ -356,7 +356,7 @@ sudo uxp-integrity update
 
 **Create data view**.
 
-![](07-elk-images/image13.png)
+![](07-elk-image/image13.png)
 
 2\. Налаштуйте поля подібним чином:
 
@@ -368,7 +368,7 @@ c. **Timestamp field** – оберіть **request_in_ts**
 
 3\. Натисніть **Save data view to Kibana**.
 
-![](07-elk-images/image15.png)
+![](07-elk-image/image15.png)
 
 Для перегляду збережених операційних даних, перейдіть у **Analytics** → **Discover** та оберіть відповідне представлення даних із спадного списку поля Data view.
 
@@ -386,11 +386,11 @@ c. **Timestamp field** – оберіть **request_in_ts**
 
 1. Скопіюйте файл прикладу інформаційної панелі ***uxp-dashboard.ndjson*** з каталогу /usr/share/doc/uxp-monitor-analytics/examples/kibana-8.x/dashboards на сервері Kibana, на свій комп’ютер, де відкрито вебінтерфейс Kibana.
 
-![](07-elk-images/image16.png)
+![](07-elk-image/image16.png)
 
 2. Перейдіть у **Management** → **Stack Management** → **Kibana** → **Saved Objects** та натисніть **Import**.
 
-![](07-elk-images/image17.png)
+![](07-elk-image/image17.png)
 
 3. Оберіть файл інформаційної панелі для імпорту.
 4. Далі, натисніть **Import**, а потім **Done**.
