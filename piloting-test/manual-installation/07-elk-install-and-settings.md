@@ -110,8 +110,7 @@ sudo /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kiban
 ```bash
 sudo /usr/share/kibana/bin/kibana-verification-code
 ```
-
-![](07-elk-image/image1.png)
+<img src="07-elk-image/image1.png" width="300"/>
 
 10. У вебінтерфейсі Kibana вставте щойно отриманий код верифікації з терміналу і натисніть Verify.
 
