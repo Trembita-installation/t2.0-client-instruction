@@ -45,6 +45,7 @@ sudo apt install uxp-integrity-admintool uxp-admintool-ubuntu
 
 3. Після встановлення відкрийте **Admin Tool** через меню “Показати програми”.
 
+![](03-adminserver-image/image1.png)
 
 ---
 
@@ -57,6 +58,8 @@ sudo apt install uxp-integrity-admintool uxp-admintool-ubuntu
 
 3. Після встановлення використовуйте ярлик **Admin Tool** на Робочому столі.
 
+  ![](03-adminserver-image/image2.png)
+  
 ---
 
 🔐 **Безпека:**  
