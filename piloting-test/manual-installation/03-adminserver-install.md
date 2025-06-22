@@ -45,10 +45,6 @@ sudo apt install uxp-integrity-admintool uxp-admintool-ubuntu
 
 3. Після встановлення відкрийте **Admin Tool** через меню “Показати програми”.
 
-4. Перевірка з’єднання з UXP виконується:
-   - кожні 10 хв автоматично;
-   - під час запуску Portable Firefox;
-   - вручну за запитом користувача.
 
 ---
 
