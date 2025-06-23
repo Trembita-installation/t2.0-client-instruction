@@ -17,7 +17,7 @@
 sudo sed -i 's/^[A-Za-z0-9]/#&/' /etc/apt/sources.list
 ```
 
-2. Додайте ключ:
+2. Додайте GPG-ключ для репозиторію:
 ```bash
 wget -O - https://project-repo.trembita.gov.ua:8081/public-keys/public.key.txt | sudo apt-key add -
 ```
