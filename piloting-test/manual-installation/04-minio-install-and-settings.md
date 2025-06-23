@@ -453,7 +453,7 @@ trusted-certificate = /etc/uxp/ssl/minio.crt
 > 
 > **address** — URL до MinIO (з портом 9000 або зміненим) <br>
 > **bucket-name** — назва раніше створеного bucket (наприклад, uxp-messagelog) <br>
-> **access-key / secret-key** — ключі раніше створеного сервісного користувача
+> **access-key / secret-key** — ключі раніше створеного сервісного користувача <br>
 > **trusted-certificate** — шлях до TLS-сертифікату (наприклад /home/minio-user/.minio/certs/public.crt) Скопіюйте файл відповідного сертифікату на ШБО
 
 3. Оновіть хеші для перевірки цілісності:
