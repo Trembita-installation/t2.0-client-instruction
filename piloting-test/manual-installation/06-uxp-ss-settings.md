@@ -176,6 +176,7 @@ https://<security-server>:4000
 ![](06-uxp-ss-settings/image22.png)
 
 ---
+<span id="subsystem-registry"></span>
 
 ## 🔹 Реєстрація підсистеми
 
