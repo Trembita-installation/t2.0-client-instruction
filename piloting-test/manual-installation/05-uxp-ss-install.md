@@ -535,3 +535,80 @@ sudo uxp-integrity update
 > ✅ **Примітка:** Подальші налаштування ключа й сертифіката виконуються через вебінтерфейс ШБО.
 
 ---
+
+## ❌ Неможливо авторизуватись в ШБО
+
+Якщо при спробі входу з правильними обліковими даними зʼявляється повідомлення «Помилка автентифікації», виконайте наступні кроки для діагностики:
+
+1. Перевірте журнал автентифікації:
+
+```bash
+sudo tail -f /var/log/uxp/identity-provider-rest-api.log
+```
+
+Якщо в журналі згадується помилка ```redirect_uri```, наприклад:
+
+```bash
+OAuth2AuthorizationCodeRequestAuthenticationException: OAuth 2.0 Parameter: redirect_uri
+```
+
+Це означає, що є конфлікт між параметром ```redirect_uri``` (вказаним у конфігурації ```OAuth```) та фактичною публічною адресою сервера безпеки (біла ІР-адреса).
+
+2. Перевірте поточну адресу сервера:
+
+Якщо використовується DNS-імʼя:
+
+```bash
+hostname -A
+```
+
+Якщо використовується IP-адреса:
+
+```bash
+hostname -I
+```
+
+Перевірте ```redirect_uri``` у базі даних:
+
+```bash
+sudo -u postgres -H -- psql -d identity-provider -c "SELECT redirect_uris FROM oauth2_client;"
+```
+
+Якщо ```redirect_uri``` не відповідає дійсній публічній адресі серверу — потрібно внести зміни у конфігураційний файл:
+
+3. Призупиніть AIDE
+
+```bash
+sudo uxp-integrity update
+```
+  
+4. Оновіть конфігурацію ```/etc/uxp/conf.d/local.ini```:
+
+```bash
+[identity-provider]
+hostname=<приватна-адреса>
+```
+
+> ❌ **Якщо** це теж не допоможе, або переадресація uri не стосується назви хосту у вашій мережі, ви можете додати додаткові переадресації uri з параметром public-client redirect-uris configuration.
+> ```bash
+> [identity-provider]
+> public-client-redirect-uris=https://<приватна-адреса>:4000
+> ```
+
+5. Перезапустіть сервіс автентифікації:
+
+```bash
+sudo systemctl restart uxp-identity-provider-rest-api
+```
+
+---
+
+## ❌ Повідомлення про помилку у PostgreSQL
+
+Після інсталяції серверу безпеки у журналі PostgreSQL може зʼявитись повідомлення:
+
+```bash
+ERROR: relation "public.databasechangeloglock" does not exist at character 22
+```
+
+Це — типове попередження при ініціалізації бази даних. Його можна ігнорувати, додаткових дій не потрібно.
