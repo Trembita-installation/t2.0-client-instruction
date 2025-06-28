@@ -140,7 +140,7 @@
 
 - [Інсталяція та налаштування MonHub](piloting-test/manual-installation/10-mon-hub-install-and-settings.md)
 
-- [Інсталяція компонентів через Ansible-playbook](piloting-test/piloting-test/scripted-installation-ansible/01-ansible.md)
+- [Інсталяція компонентів через Ansible-playbook](../piloting-test/scripted-installation-ansible/01-ansible.md)
 
 Для роботи з Локальним компонентом ПМДПД скористайтесь відповідними інструкціями:
 
