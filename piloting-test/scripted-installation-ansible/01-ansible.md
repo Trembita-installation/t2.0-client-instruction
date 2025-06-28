@@ -44,6 +44,11 @@
    ```bash
    git clone https://github.com/Trembita-installation/t2.0-client-deployment.git
    ```
+2. **Перейти до файлу /t2.0-client-deployment.git/inventories/test_ansible/infra_yaml через редактор або консоль**
+3. **Вписати внутрішні ip та hostname відповідних серверів**
+  <img width="386" alt="image" src="https://github.com/user-attachments/assets/270e1fb8-c9f0-4306-8211-9cb7d53336d6" />
+
+   
 
 2. **Перейти до директорії зі скриптами**
    ```bash
