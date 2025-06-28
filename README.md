@@ -64,7 +64,7 @@
 
   - [/scripted-installation-ansible](t2.0-client-instruction/piloting-test/scripted-installation-ansible) — інструкції зі встановлення компонентів через Ansible:
  
-    - [01-ansible.md](t2.0-client-instruction/piloting-test/scripted-installation-ansible/01-ansible.md)
+    - [01-ansible.md](piloting-test/scripted-installation-ansible/01-ansible.md)
 
 - [01_VYMOGY.md](01_VYMOGY.md) — технічні вимоги для пілотування системи
 
