@@ -72,6 +72,8 @@
 
 - [03_FORMS.md](03_FORMS.md) — перелік форм заявок, які потрібно заповнити в процесі налаштування компонентів
 
+- [04_CATALOG_SIMULATION.md](04_CATALOG_SIMULATION.md) - симуляція Каталогу
+
 - [README.md](t2.0-client-instruction/README.md) — цей файл з описом репозиторію
 
 ---
