@@ -138,9 +138,9 @@
 
 - [Інсталяція та налаштування серверу моніторингу за працездатністю Zabbix](piloting-test/manual-installation/09-zabbix-install-and-settings.md)
 
-- [mon-hub (описати)](
+- [Інсталяція та налаштування MonHub](piloting-test/manual-installation/10-mon-hub-install-and-settings.md)
 
-- [скрипт (описати)](
+- [Інсталяція компонентів через Ansible-playbook](piloting-test/piloting-test/scripted-installation-ansible/01-ansible.md)
 
 Для роботи з Локальним компонентом ПМДПД скористайтесь відповідними інструкціями:
 
