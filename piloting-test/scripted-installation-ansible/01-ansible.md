@@ -46,8 +46,11 @@
    ```
 2. **Перейти до файлу infra_yaml ( /t2.0-client-deployment.git/inventories/test_ansible/infra_yaml ) через редактор або консоль**
 3. **Вписати внутрішні ip та hostname відповідних серверів та зберегти зміни**
-  <img width="386" alt="image" src="https://github.com/user-attachments/assets/270e1fb8-c9f0-4306-8211-9cb7d53336d6" /> 
-4. **Перейти до файлу all.yaml ( /t2.0-client-deployment.git/inventories/test_ansible/all.yaml ) та вписати логін і пароль до відповідних компонентів для подальших доступів до вебінтерфейсів та інших компонентів**
+
+   <img width="386" alt="image" src="https://github.com/user-attachments/assets/270e1fb8-c9f0-4306-8211-9cb7d53336d6" /> 
+
+5. **Перейти до файлу all.yaml ( /t2.0-client-deployment.git/inventories/test_ansible/all.yaml ) та вписати логін і пароль до відповідних компонентів для подальших доступів до вебінтерфейсів та інших компонентів**
+
    <img width="764" alt="image" src="https://github.com/user-attachments/assets/606f5748-1796-430c-9891-6a75df0970f9" />
 
 
