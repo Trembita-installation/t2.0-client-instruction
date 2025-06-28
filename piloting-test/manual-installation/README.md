@@ -121,7 +121,7 @@ sudo shutdown -r now
 
 ### 3. Встановлення робочої станції адміністратора (AdminTools)
 
-   - 🔗 [Інструкція з інсталяції AdminTools](piloting-test/manual-installation/03-adminserver-install.md)
+   - 🔗 [Інструкція з інсталяції AdminTools](03-adminserver-install.md)
 
 ---
 
