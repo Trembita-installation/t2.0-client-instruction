@@ -61,14 +61,18 @@
     - [09-zabbix-install-and-settings.md](piloting-test/manual-installation/09-zabbix-install-and-settings.md) — встановлення та налаштування Zabbix
 
     - [10-mon-hub-install-and-settings.md](piloting-test/manual-installation/10-mon-hub-install-and-settings.md) — встановлення та налаштування MonHub
+   
+    - [README.md](piloting-test/manual-installation/README.md)
 
   - [/scripted-installation-ansible](piloting-test/scripted-installation-ansible) — інструкції зі встановлення компонентів через Ansible:
  
     - [01-ansible.md](/piloting-test/scripted-installation-ansible/01-ansible.md)
    
-    - [01-ansible.md](/piloting-test/scripted-installation-ansible/01-ansible.md)
+    - [02-uxp-ss-settings.md](/piloting-test/scripted-installation-ansible/02-uxp-ss-settings.md)
    
-    - [01-ansible.md](/piloting-test/scripted-installation-ansible/01-ansible.md)
+    - [02.1-uxp-service-settings.md](/piloting-test/scripted-installation-ansible/02.1-uxp-service-settings.md)
+   
+    - [README.md](/piloting-test/scripted-installation-ansible/README.md)
 
 - [01_VYMOGY.md](01_VYMOGY.md) — технічні вимоги для пілотування системи
 
