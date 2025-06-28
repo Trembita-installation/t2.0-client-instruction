@@ -62,7 +62,7 @@
 
     - [10-mon-hub-install-and-settings.md](piloting-test/manual-installation/10-mon-hub-install-and-settings.md) — встановлення та налаштування MonHub
 
-  - [/script-installation](t2.0-client-instruction/piloting-test/script-installation) — інструкції зі встановлення компонентів через Ansible:
+  - [/scripted-installation-ansible](t2.0-client-instruction/piloting-test/scripted-installation-ansible) — інструкції зі встановлення компонентів через Ansible:
  
     - ... 
 
