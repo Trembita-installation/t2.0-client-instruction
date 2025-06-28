@@ -38,7 +38,7 @@
 
 - [/piloting-test](t2.0-client-instruction/piloting-test) — включає два основні підкаталоги:
 
-  - [/manual-installation](../manual-installation) — покрокові інструкції з ручного встановлення компонентів:
+  - [/manual-installation](piloting-test/manual-installation) — покрокові інструкції з ручного встановлення компонентів:
   
     - [01-env-components.md](piloting-test/manual-installation/01-env-components.md) — вимоги до компонентів
 
