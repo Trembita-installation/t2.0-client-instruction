@@ -60,7 +60,7 @@
 
     - [09-zabbix-install-and-settings.md](piloting-test/manual-installation/09-zabbix-install-and-settings.md) — встановлення та налаштування Zabbix
 
-    - [11-mon-hub-install-and-settings.md](piloting-test/manual-installation/11-mon-hub-install-and-settings.md) — встановлення та налаштування MonHub
+    - [10-mon-hub-install-and-settings.md](piloting-test/manual-installation/10-mon-hub-install-and-settings.md) — встановлення та налаштування MonHub
 
   - [/script-installation](t2.0-client-instruction/piloting-test/script-installation) — інструкції зі встановлення компонентів через Ansible:
  
