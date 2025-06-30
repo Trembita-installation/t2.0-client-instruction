@@ -47,18 +47,19 @@
    ```bash
    git clone https://github.com/Trembita-installation/t2.0-client-deployment.git
    ```
-2. **Перейти до файлу infra_yaml ( /t2.0-client-deployment.git/inventories/test_ansible/infra_yaml ) через редактор або консоль**
+2. **Перейти до файлу infra_yaml ( /t2.0-client-deployment.git/inventories/exemple/infra_yaml ) через редактор або консоль**
 3. **Вписати внутрішні ip та hostname відповідних серверів та зберегти зміни**
 
+   ![infra.yaml](01-ansible/image1.png)
+
    
 
-5. **Перейти до файлу all.yaml ( /t2.0-client-deployment.git/inventories/test_ansible/all.yaml ) та вписати логін і пароль до відповідних компонентів для подальших доступів до вебінтерфейсів та інших компонентів**
+5. **Перейти до файлу all.yaml ( /t2.0-client-deployment.git/inventories/exemple/all.yaml ) та вписати логіни і паролі для подальших доступів до вебінтерфейсів та інших компонентів**
 
   
-
+![all.yaml](01-ansible/image2.png)
 
    
-
 2. **Далі через консоль перейти до дирикторії з скриптом**
    ```bash
    cd t2.0-client-deployment/
