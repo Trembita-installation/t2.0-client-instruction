@@ -59,9 +59,9 @@
 
 * **Можна змінювати імена юзерів скрізь, окрім юзера для** **SS**
   
-![all.yaml](01-ansible/image2.png)
+<img width="675" alt="image" src="https://github.com/user-attachments/assets/6d453482-5acc-4d6d-a404-e451c3eb05e2" />
 
-   
+
 2. **Далі через консоль перейти до дирикторії з скриптом**
    ```bash
    cd t2.0-client-deployment/
