@@ -58,13 +58,13 @@
    ```
 5. **Перейменуйте папку** `sample` ( /t2.0-client-deployment.git/inventories/sample ) в назву Вашого проєкту. І від назви Вашого проєкту змінювати назву в наступних файлах `/t2.0-client-deployment.git/inventories/___`
 
-6. **Перейти до файлу infra_yaml ( /t2.0-client-deployment.git/inventories/___/infra_yaml ) через редактор або консоль**
+6. **Перейти до файлу infra_yaml ( /inventories/___/infra_yaml ) через редактор або консоль**
 
 7. **Вписати внутрішні ip та hostname відповідних серверів та зберегти зміни**
 
    <img width="406" alt="image" src="https://github.com/user-attachments/assets/2acc046a-db76-4f17-8186-afe6eb43acfe" />
 
-8. **Перейти до файлу all.yaml ( /t2.0-client-deployment.git/inventories/___/group_vars/all.yaml ) та вписати логіни і паролі для подальших доступів до вебінтерфейсів та інших компонентів**
+8. **Перейти до файлу all.yaml ( /inventories/___/group_vars/all.yaml ) та вписати логіни і паролі для подальших доступів до вебінтерфейсів та інших компонентів**
 
 * **Можна змінювати імена юзерів скрізь, окрім юзера для** **SS**
   
@@ -73,7 +73,7 @@
 6. **Далі через консоль перейти до дирикторії з скриптом**
 
    ```bash
-   cd t2.0-client-deployment/
+   cd t2_instal/
    ```
 
 8. **Перевірити доступність серверів**
