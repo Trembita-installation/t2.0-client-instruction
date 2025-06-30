@@ -72,9 +72,9 @@
    ansible -i inventories/test_ansible/infra.yaml all -m ping
    ```
 
-4. **Підготувати систему (оновлення пакетів, налаштування репозиторіїв)**
+4. **Додати репозиторії на всі сервери наступною командою**
    ```bash
-   ansible-playbook -i inventories/test_ansible/infra.yaml repa.yaml
+   ansible-playbook  -u  your user -i inventories/test_ansible --private-key=/path/your/key repa_install.yaml
    ```
 
 5. **Встановити окремі компоненти:**
