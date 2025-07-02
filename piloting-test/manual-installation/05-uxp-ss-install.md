@@ -56,7 +56,7 @@ wget -O - https://project-repo.trembita.gov.ua:8081/public-keys/public.key.txt |
 4. Додайте репозиторій:
 
 ```bash
-echo 'deb https://project-repo.trembita.gov.ua:8081/repository/tr-2-pre-final/ jammy main' | sudo tee -a /etc/apt/sources.list
+echo 'deb https://project-repo.trembita.gov.ua:8081/repository/t2-stack-1.22.7/ jammy main' | sudo tee -a /etc/apt/sources.list
 ```
 5. Оновіть список пакетів:
 
@@ -330,7 +330,7 @@ sudo apt install pcscd libccid pcsc-tools libpcsclite opensc
 1. Завантажте пакет драйверів PKCS#11 ```NCMGryada301PKCS11Libs-Linux.zip``` із репозиторію:
 
 ```bash
-sudo wget REPO_NCMGryada301PKCS11Libs-Linux.zip 
+sudo wget https://project-repo.trembita.gov.ua:8081/files/t2/NCMGryada301PKCS11Libs-Linux.zip
 ```
    
 2. Розпакуйте файли у директорію ```/usr/share/uxp/lib/``` :
@@ -408,7 +408,7 @@ sudo uxp-integrity update
 1. Завантажте пакет драйверів PKCS#11 ```libcihsm.so``` із репозиторію:
 
 ```bash
-sudo wget REPO_libcihsm.so
+sudo wget https://project-repo.trembita.gov.ua:8081/files/t2/libcihsm.so
 ```
    
 2. Перемістіть файли у директорію ```/usr/share/uxp/lib/``` :
@@ -461,7 +461,7 @@ sudo uxp-integrity update
 1. Завантажте пакет драйверів PKCS#11 ```libav337p11d.so``` із репозиторію:
 
 ```bash
-sudo wget REPO_libav337p11d.so
+sudo wget https://project-repo.trembita.gov.ua:8081/files/t2/libav337p11d.so
 ```
    
 2. Перемістіть файли у директорію ```/usr/share/uxp/lib/``` :
@@ -495,7 +495,7 @@ sudo chmod 644 /usr/share/uxp/lib/libav337p11d.so
 1. Завантажте пакет драйверів PKCS#11 ```EKAlmaz1CPKCS11Libs-Linux.zip``` із репозиторію:
 
 ```bash
-sudo wget REPO_EKAlmaz1CPKCS11Libs-Linux.zip
+sudo wget https://project-repo.trembita.gov.ua:8081/files/t2/EKAlmaz1CPKCS11Libs-Linux.zip
 ```
    
 2. Розпакуйте файли у директорію ```/usr/share/uxp/lib/``` :
