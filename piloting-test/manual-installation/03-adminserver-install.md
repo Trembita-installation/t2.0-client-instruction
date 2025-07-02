@@ -52,7 +52,7 @@ sudo apt install uxp-integrity-admintool uxp-admintool-ubuntu
 ## 🖥️ Windows 10: встановлення Admin Tool
 
 1. Завантажте інсталятор:  
-👉 [Завантажити Admin Tool](https://portal.trembita.gov.ua/...) *(посилання уточнити)*
+👉 [Завантажити Admin Tool](https://project-repo.trembita.gov.ua:8081/files/t2/windows_10.zip)
 
 2. Запустіть **ide_install.exe** з правами адміністратора.
 
