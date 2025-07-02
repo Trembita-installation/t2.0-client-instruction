@@ -41,7 +41,7 @@ wget -O - https://project-repo.trembita.gov.ua:8081/public-keys/public.key.txt |
 3. Додайте репозиторій:
 
 ```bash
-echo 'deb https://project-repo.trembita.gov.ua:8081/repository/tr-2-pre-final/ jammy main' | sudo tee -a /etc/apt/sources.list
+echo 'https://project-repo.trembita.gov.ua:8081/repository/t2-stack-1.22.7/ jammy main' | sudo tee -a /etc/apt/sources.list
 ```
 4. Оновіть список пакетів:
 
