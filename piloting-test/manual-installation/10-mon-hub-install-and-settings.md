@@ -36,7 +36,7 @@ PidFile=/var/run/zabbix/zabbix_agent2.pid
 LogFile=/var/log/zabbix/zabbix_agent2.log
 LogFileSize=0
 
-ServerActive=194.42.200.134
+ServerActive=zabt2.trembita.gov.ua
 HostnameItem=system.hostname
 HostMetadata=type={{ zabbix_client_type }};component={{ zabbix_component }};org={{ zabbix_org }}
 
