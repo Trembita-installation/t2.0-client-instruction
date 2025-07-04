@@ -90,9 +90,9 @@
 
 11. **Встановити окремі компоненти:**
 
-   - **Elasticsearch + Kibana**
+  - **UXP Security Server (ШБО)**
 
-     ```bash
+      ```bash
      ansible-playbook -i inventories/___/infra.yaml ss_install.yaml
      ```
 
@@ -114,11 +114,13 @@
      ansible-playbook -i inventories/___/infra.yaml zabbix_install.yaml
      ```
 
-   - **UXP Security Server (ШБО)**
+      - **Elasticsearch + Kibana**
 
-      ```bash
+     ```bash
      ansible-playbook -i inventories/___/infra.yaml ek_install.yaml
      ```
+
+   
 ---
 
 
