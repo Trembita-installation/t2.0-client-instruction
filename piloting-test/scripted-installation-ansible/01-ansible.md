@@ -114,7 +114,7 @@
      ansible-playbook -i inventories/___/infra.yaml zabbix_install.yaml
      ```
 
-      - **Elasticsearch + Kibana**
+  - **Elasticsearch + Kibana**
 
      ```bash
      ansible-playbook -i inventories/___/infra.yaml ek_install.yaml
