@@ -85,7 +85,7 @@
 10. **Додати репозиторії на всі сервери наступною командою**
    
    ```bash
-   ansible-playbook  -u  your user -i inventories/___ --private-key=/path/your/key repa_install.yaml
+   ansible-playbook  -u  your user -i inventories/___ --private-key=/path/your/key repa.yaml
    ```
 
 11. **Встановити окремі компоненти:**
