@@ -43,6 +43,7 @@
     - [05-uxp-ss-install.md](piloting-test/manual-installation/05-uxp-ss-install.md) — встановлення ШБО
     - [06-uxp-ss-settings.md](piloting-test/manual-installation/06-uxp-ss-settings.md) — налаштування ШБО
     - [06.1-uxp-service-settings.md](piloting-test/manual-installation/06.1-uxp-service-settings.md) — налаштування сервісів в ШБО
+    - [06.2-uxp-ss-user-guide.md](piloting-test/manual-installation/06.2-uxp-ss-user-guide.md) — опціональні налаштування ШБО  
     - [07-elk-install-and-settings.md](piloting-test/manual-installation/07-elk-install-and-settings.md) — встановлення та налаштування ELK
     - [08-graylog-install-and-settings.md](piloting-test/manual-installation/08-graylog-install-and-settings.md) — встановлення та налаштування Graylog
     - [09-zabbix-install-and-settings.md](piloting-test/manual-installation/09-zabbix-install-and-settings.md) — встановлення та налаштування Zabbix
