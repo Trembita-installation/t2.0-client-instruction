@@ -134,6 +134,8 @@
 
 - [Керування сервісами на ШБО](piloting-test/manual-installation/06.1-uxp-service-settings.md)
 
+- [Опціональне налаштування ШБО](piloting-test/manual-installation/06.2-uxp-ss-user-guide.md)
+
 - [Інсталяція серверу аналізу транзакцій ELK](piloting-test/manual-installation/07-elk-install-and-settings.md)
 
 - [Інсталяція та налаштування серверу аналізу журналів подій до ШБО (Graylog)](piloting-test/manual-installation/08-graylog-install-and-settings.md)
