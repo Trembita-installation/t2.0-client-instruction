@@ -87,6 +87,7 @@
    ```bash
    ansible-playbook  -u  your user -i inventories/___ --private-key=/path/your/key repa.yaml
    ```
+(/path/your/key - це шлях до Вашого приватного ключа з яким Ви підключаєтесь до серверів)
 
 11. **Встановити окремі компоненти:**
 
