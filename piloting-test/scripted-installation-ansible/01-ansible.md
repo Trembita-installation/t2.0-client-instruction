@@ -65,6 +65,7 @@
    <img width="406" alt="image" src="https://github.com/user-attachments/assets/2acc046a-db76-4f17-8186-afe6eb43acfe" />
 
 8. **Перейти до файлу all.yaml ( /inventories/___/group_vars/all.yaml ) та вписати логіни і паролі для подальших доступів до вебінтерфейсів та інших компонентів**
+   **В пілотні версії для налаштування FILEBEAT в цьому ж файлі треба додати id, які надасть адміністратор системи ʼʼТрембітаʼʼ**
 
 * **Можна змінювати імена юзерів скрізь, окрім юзера для** **SS**
   
@@ -90,6 +91,8 @@
 (/path/your/key - це шлях до Вашого приватного ключа з яким Ви підключаєтесь до серверів)
 
 11. **Встановити окремі компоненти:**
+
+    **В пілотній версії спочатку треба встановити та налаштувати FILEBEAT (filebeat_install.yaml)**
 
   - **UXP Security Server (ШБО)**
 
@@ -121,7 +124,11 @@
      ansible-playbook -i inventories/___/infra.yaml ek_install.yaml
      ```
 
-   
+   - **FILEBEAT**
+     ```bash
+     ansible-playbook -i inventories/___/infra.yaml filebeat_install.yaml
+     ```
+     
 ---
 
 
