@@ -80,7 +80,8 @@
 8. **Перевірити доступність серверів**
 
    ```bash
-   ansible -i inventories/___/infra.yaml all -m ping
+  ansible -i inventories/_/infra.yaml all -m ping --private-key=/path/to/ssh_private_key -u username
+
    ```
    
 10. **Додати репозиторії на всі сервери наступною командою**
