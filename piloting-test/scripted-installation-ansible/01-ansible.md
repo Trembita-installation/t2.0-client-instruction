@@ -71,27 +71,26 @@
   
   <img width="675" alt="image" src="https://github.com/user-attachments/assets/6d453482-5acc-4d6d-a404-e451c3eb05e2" />
 
-6. **Далі через консоль перейти до дирикторії з скриптом**
+9. **Далі через консоль перейти до дирикторії з скриптом**
 
    ```bash
    cd t2_instal/
    ```
 
-8. **Перевірити доступність серверів**
+10. **Перевірити доступність серверів**
 
-   ```bash
-  ansible -i inventories/_/infra.yaml all -m ping --private-key=/path/to/ssh_private_key -u username
-
-   ```
+    ```bash
+    ansible -i inventories/_/infra.yaml all -m ping --private-key=/path/to/ssh_private_key -u username
+    ```
    
-10. **Додати репозиторії на всі сервери наступною командою**
+11. **Додати репозиторії на всі сервери наступною командою**
    
    ```bash
    ansible-playbook  -u  your user -i inventories/___ --private-key=/path/your/key repa.yaml
    ```
 (/path/your/key - це шлях до Вашого приватного ключа з яким Ви підключаєтесь до серверів)
 
-11. **Встановити окремі компоненти:**
+12. **Встановити окремі компоненти:**
 
     **В пілотній версії спочатку треба встановити та налаштувати FILEBEAT (filebeat_install.yaml)**
 
