@@ -59,7 +59,7 @@ Include=/etc/zabbix/zabbix_agent2.d/plugins.d/*.conf
 > - `org`: код ЄДРПОУ
 
 
-> 💡 **Приклад HostMetadata для серверу MinIO**
+> 💡 **Приклад HostMetadata для серверу MinIO:** <br>
 > HostMetadata=type=heavy;component=minio;org=43395033
 ---
 
@@ -121,7 +121,6 @@ sudo systemctl restart zabbix-agent2
 ---
 
 
----
 
 ## ✅ 8. Встановлення та налаштування Filebeat
 
