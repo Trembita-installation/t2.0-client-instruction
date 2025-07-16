@@ -97,36 +97,36 @@
   - **UXP Security Server (ШБО)**
 
       ```bash
-     ansible-playbook -i inventories/___/infra.yaml ss_install.yaml
+     ansible-playbook  -u  your user -i inventories/___ --private-key=/path/your/key ss_install.yaml
      ```
 
    - **MinIO**
 
      ```bash
-     ansible-playbook -i inventories/___/infra.yaml minio_install.yaml
+     ansible-playbook  -u  your user -i inventories/___ --private-key=/path/your/key minio_install.yaml
      ```
 
    - **Graylog**
     
      ```bash
-     ansible-playbook -i inventories/___/infra.yaml graylog_install.yaml
+     ansible-playbook  -u  your user -i inventories/___ --private-key=/path/your/key graylog_install.yaml
      ```
 
    - **Zabbix**
 
      ```bash
-     ansible-playbook -i inventories/___/infra.yaml zabbix_install.yaml
+     ansible-playbook  -u  your user -i inventories/___ --private-key=/path/your/key zabbix_install.yaml
      ```
 
   - **Elasticsearch + Kibana**
 
      ```bash
-     ansible-playbook -i inventories/___/infra.yaml ek_install.yaml
+     ansible-playbook  -u  your user -i inventories/___ --private-key=/path/your/key ek_install.yaml
      ```
 
    - **FILEBEAT**
      ```bash
-     ansible-playbook -i inventories/___/infra.yaml filebeat_install.yaml
+     ansible-playbook  -u  your user -i inventories/___ --private-key=/path/your/key filebeat_install.yaml
      ```
      
 ---
