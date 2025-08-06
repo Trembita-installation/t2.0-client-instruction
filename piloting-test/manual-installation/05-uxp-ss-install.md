@@ -310,7 +310,7 @@ sudo uxp-integrity pause
 Встановіть інструменти для керування криптографічними пристроями на Ubuntu:
 
 ```bash
-sudo apt install pcscd libccid pcsc-tools libpcsclite opensc
+sudo apt install pcscd libccid pcsc-tools libpcsclite1 opensc
 ```
 
 Приєднайте пристрій до сервера Ubuntu з встановленим ШБО.
