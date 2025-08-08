@@ -181,7 +181,11 @@ sudo systemctl status uxp-*
 > ```bash
 > sudo uxp-integrity check
 > ```
->
+> • Створення/оновлення хешу баз(и) даних AIDE:
+> ```bash
+> sudo uxp-integrity update
+> ```
+> 
 > • Показ статусу контрольованих сервісів:
 > ```bash
 > sudo uxp-integrity status
