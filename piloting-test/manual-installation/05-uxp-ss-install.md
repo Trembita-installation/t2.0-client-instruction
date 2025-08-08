@@ -196,14 +196,14 @@ sudo systemctl status uxp-*
 > sudo uxp-integrity status
 > ```
 >
+> • Запуск контрольованих сервісів після паузи:
+> ```bash
+> sudo uxp-integrity start
+> ```
+> 
 > • Список контрольованих модулів і сервісів:
 > ```bash
 > sudo uxp-integrity list
-> ```
->
-> • Запуск сервісів після паузи:
-> ```bash
-> sudo uxp-integrity start
 > ```
 >
 > • Зупинка сервісів:
