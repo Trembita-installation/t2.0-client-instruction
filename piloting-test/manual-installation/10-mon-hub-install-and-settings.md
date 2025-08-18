@@ -63,17 +63,8 @@ Include=/etc/zabbix/zabbix_agent2.d/plugins.d/*.conf
 > HostMetadata=type=heavy;component=minio;org=43395033
 ---
 
-## ✅ 3. Автоматичне визначення типу (через Ansible, optional)
 
-```yaml
-zabbix_client_type: "{{ 'heavy' if ansible_processor_vcpus > 4 else 'light' }}"
-zabbix_component: ss
-zabbix_org: 43395033
-```
-
----
-
-## ✅ 4. Перезапуск і автозапуск
+## ✅ 3. Перезапуск і автозапуск
 
 ```bash
 sudo systemctl restart zabbix-agent2
@@ -82,7 +73,7 @@ sudo systemctl enable zabbix-agent2
 
 ---
 
-## ✅ 5. Перевірка логів агента
+## ✅ 4. Перевірка логів агента
 
 ```bash
 tail -f /var/log/zabbix/zabbix_agent2.log
@@ -97,7 +88,7 @@ sending metadata: type=heavy;component=ss;org=43395033
 
 ---
 
-## ✅ 6. Налаштування TLS (PSK)
+## ✅ 5. Налаштування TLS (PSK)
 
 1. Отримайте ключ `PSK` від адміністратора. Збережіть його в файл:
 
@@ -120,9 +111,7 @@ sudo systemctl restart zabbix-agent2
 
 ---
 
-
-
-## ✅ 8. Встановлення та налаштування Filebeat
+## ✅ 6. Встановлення та налаштування Filebeat
 
 > Filebeat дозволяє передавати журнали подій з компонентів системи до центрального лог-сховища (Elasticsearch).  
 > Ми збираємо лише дозволені типи логів. Логи з адмін-станцій **не збираються**.
@@ -187,6 +176,9 @@ tail -f /var/log/filebeat/filebeat
 - Логи збираються лише на дозволених серверах.
 - Усі журнали — в межах офіційних згод організацій.
 - MonHub використовується **тільки під час пілоту**.
+
+---
+
 ## ✅ 7. Очікувана поведінка на сервері
 
 Після запуску агент:
