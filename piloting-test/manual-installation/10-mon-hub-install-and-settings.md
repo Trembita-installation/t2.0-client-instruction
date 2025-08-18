@@ -14,7 +14,7 @@
 wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_7.0-1+ubuntu22.04_all.deb
 sudo dpkg -i zabbix-release_7.0-1+ubuntu22.04_all.deb
 sudo apt update
-sudo apt install zabbix-agent2 zabbix-agent2-plugin-*
+sudo apt install zabbix-agent2
 ```
 
 > 💡 Пакети також будуть доступні у внутрішньому репозиторії Трембіта.
