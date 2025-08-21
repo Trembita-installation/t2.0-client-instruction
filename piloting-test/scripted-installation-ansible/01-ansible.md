@@ -98,7 +98,7 @@
 11. **Додати репозиторій** на всі сервери
    
    ```bash
-   ansible-playbook  -u  your user -i inventories/_name_your_project_ --private-key=/path/your/key repa.yaml
+   ansible-playbook  -u  your user -i inventories/_name_your_project_/infra.yaml --private-key=/path/your/key repa.yaml
    ```
 > ℹ️ **Примітка:**  `/path/your/key` - це шлях до Вашого приватного ключа з яким Ви підключаєтесь до серверів
 
