@@ -92,7 +92,7 @@
 
 12. **Встановити окремі компоненти:**
 
-    **В пілотній версії спочатку треба встановити та налаштувати FILEBEAT (filebeat_install.yaml) за допомогою скрипта та zabbix_agent по інструкції piloting-test/manual-installation/10-mon-hub-install-and-settings.md**
+    **В пілотній версії спочатку треба встановити та налаштувати FILEBEAT (filebeat_install.yaml) за допомогою скрипта та zabbix_agent по інструкції [piloting-test/manual-installation/10-mon-hub-install-and-settings.md]**
 
   - **UXP Security Server (ШБО)**
 
