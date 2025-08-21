@@ -129,20 +129,75 @@
      ```bash
      ansible-playbook  -u  your user -i inventories/_name_your_project_/infra.yaml --private-key=/path/your/key ek_install.yaml
      ```
+
+> ⚠️ **Увага!** Під час виконання `ansible-playbook` **пароль** до вебінтерфейсу Kibana генерується автоматично і відображається у виводі після **успішного завершення**. За потреби пароль можна змінити.
+
    
   - **Zabbix**
 
      ```bash
      ansible-playbook  -u  your user -i inventories/_name_your_project_/infra.yaml --private-key=/path/your/key zabbix_install.yaml
      ```
+     
   - **Graylog**
     
      ```bash
      ansible-playbook  -u  your user -i inventories/_name_your_project_/infra.yaml --private-key=/path/your/key graylog_install.yaml
      ```
-
 ---
 
+## 🖥️ Довідник посилання для доступу до компонентів
 
 
+  - **UXP Security Server (ШБО)**
+
+    ```bash
+    https://<security-server>:4000
+    ```
+
+> 🔐 **Примітка**
+> Логін - `uxpadmin`
+> Пароль задається у файлі `all.yaml`
+
+  - **MinIO**
+
+     ```bash
+     https://<security-server>:2001
+     ```
+
+> 🔐 **Примітка**
+> Логін за замовчуванням - `minio` (Актуальний логін задається у файлі `all.yaml`)
+> Пароль задається у файлі `all.yaml`
+
+
+  - **Elasticsearch + Kibana**
+
+     ```bash
+     https://<security-server>:5601
+     ```
+> 🔐 **Примітка**
+> Логін - `elastic`
+> Пароль генерується автоматично і відображається у виводі після **успішного завершення** `ansible-playbook`
+
+  
+  - **Zabbix**
+
+     ```bash
+     http://<security-server>:8080
+     ```
+
+> 🔐 **Примітка**
+> Логін - `Admin`
+> Пароль - `zabbix`
+
+     
+  - **Graylog**
+    
+     ```bash
+     https://<graylog-server-address>
+     ```
+ 
+> 🔐 **Примітка**
+> Логін - `admin`
+> Пароль задається у файлі `all.yaml`
 
