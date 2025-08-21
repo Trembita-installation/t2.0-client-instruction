@@ -7,6 +7,7 @@
 Використовується `zabbix-agent2` у режимі **active checks**, з автоматичною реєстрацією на сервері через `HostMetadata`.
 
 ---
+<span id="zabbix-agent"></span>
 
 ## ✅ 1. Zabbix agent2 (Ubuntu 22.04)
 
