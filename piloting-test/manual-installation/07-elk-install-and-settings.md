@@ -92,7 +92,7 @@ sudo systemctl restart elasticsearch kibana
 6. Переконайтесь, що користувацький інтерфейс Kibana доступний через браузер за адресою:
 
 ```bash
-https://\<server-address\>:5601
+http://\<server-address\>:5601
 ```
 
 8. Згенеруйте реєстраційний токен для екземпляра Kibana за допомогою такої команди:
