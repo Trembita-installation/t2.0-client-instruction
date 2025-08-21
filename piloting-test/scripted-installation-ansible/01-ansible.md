@@ -7,14 +7,18 @@
 > ## 📌 Примітка
 >Інсталяція може виконуватись як **окремо для кожного компонента**, так і **одразу для всіх** (через об’єднаний сценарій або послідовне виконання playbook-файлів).
 
-## 🔧 Компоненти, які встановлюються
+## 🔧 Компоненти, які встановлюються за допомогою Ansible-playbook
 
 - **UXP Security Server (ШБО)**
 - **MinIO**
 - **ELK**
 - **Graylog**
 - **Zabbix**
-- **MonHub**
+- **FILEBEAT (для MonHub рішення)**
+
+## ⚠️ Компоненти, які встановлюються вручну:
+
+- **Zabbix-agent (для MonHub рішення)**
 
 ---
 
@@ -37,7 +41,7 @@
   >sudo apt update && sudo apt install -y ansible
   >```
   
-- SSH-доступ по ключу до цільових серверів
+- SSH-доступ по **ключу** до цільових серверів
 - Доступ до Інтернету з цільових серверів
 
 ## 🚀 Кроки встановлення
@@ -56,22 +60,30 @@
    ```bash
    git clone https://github.com/Trembita-installation/t2.0-client-deployment.git .
    ```
-5. **Перейменуйте папку** `sample` ( /t2.0-client-deployment.git/inventories/sample ) в назву Вашого проєкту. І від назви Вашого проєкту змінювати назву в наступних файлах `/t2.0-client-deployment.git/inventories/___`
+5. **Перейменуйте папку** `sample` ( /t2.0-client-deployment.git/inventories/**sample** ) в назву Вашого проєкту. І від назви Вашого проєкту змінювати назву в наступних файлах `/t2.0-client-deployment.git/inventories/_name_your_project_`
 
-6. **Перейти до файлу infra_yaml ( /inventories/___/infra_yaml ) через редактор або консоль**
+6. **Перейти до файлу** `infra_yaml` ( /inventories/**_name_your_project_**/infra_yaml ) через редактор або консоль
 
-7. **Вписати внутрішні ip та hostname відповідних серверів та зберегти зміни**
+7. **Вписати** внутрішні `ip` та `hostname` відповідних серверів та зберегти зміни
 
    <img width="406" alt="image" src="https://github.com/user-attachments/assets/2acc046a-db76-4f17-8186-afe6eb43acfe" />
 
-8. **Перейти до файлу all.yaml ( /inventories/___/group_vars/all.yaml ) та вписати логіни і паролі для подальших доступів до вебінтерфейсів та інших компонентів**
-   **В пілотні версії для налаштування FILEBEAT в цьому ж файлі треба додати id, які надасть адміністратор системи ʼʼТрембітаʼʼ**
+8. **Перейти до файлу** `all.yaml` ( /inventories/**_name_your_project_**/group_vars/all.yaml ) та вписати `логіни` і `паролі` для подальших доступів до вебінтерфейсів та інших компонентів
 
-* **Можна змінювати імена юзерів скрізь, окрім юзера для** **SS**
+> ⚠️ **Увага!** Для налаштування **FILEBEAT** в файлі `all.yaml` треба додати `id`, які надає Адміністратор системи Трембіта
+> ```bash
+> ######## FILEBEAT ###############
+> project_id: "PROVIDED_BY_SUPPORT"
+> filebeat_id: "PROVIDED_BY_SUPPORT"
+> filebeat_api_key: "PROVIDED_BY_SUPPORT"
+> #################################
+> ```
+
+> ⚠️ **Увага!** Підтримується зміна імен юзерів, окрім юзера для **SS**
   
   <img width="675" alt="image" src="https://github.com/user-attachments/assets/6d453482-5acc-4d6d-a404-e451c3eb05e2" />
 
-9. **Далі через консоль перейти до дирикторії з скриптом**
+9. **Перейти до дирикторії** через консоль з Ansible-playbook 
 
    ```bash
    cd t2_instal/
@@ -80,55 +92,55 @@
 10. **Перевірити доступність серверів**
 
     ```bash
-    ansible -i inventories/_/infra.yaml all -m ping --private-key=/path/to/ssh_private_key -u username
+    ansible -i inventories/_name_your_project_/infra.yaml all -m ping --private-key=/path/to/ssh_private_key -u username
     ```
    
-11. **Додати репозиторії на всі сервери наступною командою**
+11. **Додати репозиторій** на всі сервери
    
    ```bash
-   ansible-playbook  -u  your user -i inventories/___ --private-key=/path/your/key repa.yaml
+   ansible-playbook  -u  your user -i inventories/_name_your_project_ --private-key=/path/your/key repa.yaml
    ```
-(/path/your/key - це шлях до Вашого приватного ключа з яким Ви підключаєтесь до серверів)
+> ℹ️ **Примітка:**  `/path/your/key` - це шлях до Вашого приватного ключа з яким Ви підключаєтесь до серверів
 
-12. **Встановити окремі компоненти:**
 
-    **В пілотній версії спочатку треба встановити та налаштувати FILEBEAT (filebeat_install.yaml) за допомогою скрипта та zabbix_agent по інструкції (10-mon-hub-install-and-settings.md)[piloting-test/manual-installation/10-mon-hub-install-and-settings.md]**
+12. **Встановити компоненти** в наступній послідовності:
+
+- **Zabbix-agent** - вручну встановити [Zabbix-agent](10-mon-hub-install-and-settings.md#zabbix-agent)
+
+- **FILEBEAT**
+     ```bash
+     ansible-playbook  -u  your user -i inventories/_name_your_project_ --private-key=/path/your/key filebeat_install.yaml
+     ```
 
   - **UXP Security Server (ШБО)**
 
       ```bash
-     ansible-playbook  -u  your user -i inventories/___ --private-key=/path/your/key ss_install.yaml
+     ansible-playbook  -u  your user -i inventories/_name_your_project_ --private-key=/path/your/key ss_install.yaml
      ```
 
    - **MinIO**
 
      ```bash
-     ansible-playbook  -u  your user -i inventories/___ --private-key=/path/your/key minio_install.yaml
+     ansible-playbook  -u  your user -i inventories/_name_your_project_ --private-key=/path/your/key minio_install.yaml
      ```
 
    - **Graylog**
     
      ```bash
-     ansible-playbook  -u  your user -i inventories/___ --private-key=/path/your/key graylog_install.yaml
+     ansible-playbook  -u  your user -i inventories/_name_your_project_ --private-key=/path/your/key graylog_install.yaml
      ```
 
    - **Zabbix**
 
      ```bash
-     ansible-playbook  -u  your user -i inventories/___ --private-key=/path/your/key zabbix_install.yaml
+     ansible-playbook  -u  your user -i inventories/_name_your_project_ --private-key=/path/your/key zabbix_install.yaml
      ```
 
   - **Elasticsearch + Kibana**
 
      ```bash
-     ansible-playbook  -u  your user -i inventories/___ --private-key=/path/your/key ek_install.yaml
-     ```
-
-   - **FILEBEAT**
-     ```bash
-     ansible-playbook  -u  your user -i inventories/___ --private-key=/path/your/key filebeat_install.yaml
-     ```
-     
+     ansible-playbook  -u  your user -i inventories/_name_your_project_ --private-key=/path/your/key ek_install.yaml
+     ```   
 ---
 
 
