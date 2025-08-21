@@ -105,7 +105,7 @@
 
 12. **Встановити компоненти** в наступній послідовності:
 
-- **Zabbix-agent** - вручну встановити [Zabbix-agent](10-mon-hub-install-and-settings.md#zabbix-agent)
+- **Zabbix-agent** - вручну встановити [Zabbix-agent](../manual-installation/10-mon-hub-install-and-settings.md#zabbix-agent)
 
 - **FILEBEAT**
      ```bash
