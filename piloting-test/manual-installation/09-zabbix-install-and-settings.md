@@ -259,6 +259,10 @@ sudo uxp-integrity update
 - На вкладці ```Permissions```:
 
   - Додайте групу ```uxp-security-servers```
+    
+  - Встановіть доступ: ```Read-write```
+ 
+  - Додайте групу ```Templates/Applications	```
 
   - Встановіть доступ: ```Read-write```
 
