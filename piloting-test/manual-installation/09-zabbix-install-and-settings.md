@@ -262,7 +262,7 @@ sudo uxp-integrity update
     
   - Встановіть доступ: ```Read-write```
  
-  - Додайте групу ```Templates/Applications	```
+  - Додайте групу ```Templates/Applications```
 
   - Встановіть доступ: ```Read-write```
 
