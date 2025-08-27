@@ -266,7 +266,7 @@ sudo uxp-integrity update
 
   - Встановіть доступ: ```Read-write```
 
-    ![](09-zabbix-image/image17.png)
+    ![](09-zabbix-image/image16.png)
 
 - Натисніть ```Add```
 
