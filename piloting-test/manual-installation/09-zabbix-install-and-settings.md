@@ -308,7 +308,7 @@ sudo nano /etc/uxp/monitor-agent.ini
 
 ```bash
 [zabbix-1]
-; ...
+address = 192.168.0.20
 enable_configurator = true
 conf_api_path = /api_jsonrpc.php
 conf_api_port = 8080
