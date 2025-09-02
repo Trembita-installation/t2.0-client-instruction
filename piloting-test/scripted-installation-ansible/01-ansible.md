@@ -105,8 +105,6 @@
 
 12. **Встановити компоненти** в наступній послідовності:
 
-
-
   - **FILEBEAT**
      ```bash
      ansible-playbook  -u  your user -i inventories/_name_your_project_/infra.yaml --private-key=/path/your/key filebeat_install.yaml
