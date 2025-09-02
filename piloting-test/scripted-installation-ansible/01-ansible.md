@@ -105,7 +105,7 @@
 
 12. **Встановити компоненти** в наступній послідовності:
 
-  - **Zabbix-agent** - вручну встановити [Zabbix-agent](../manual-installation/10-mon-hub-install-and-settings.md#zabbix-agent)
+
 
   - **FILEBEAT**
      ```bash
@@ -144,6 +144,7 @@
      ```bash
      ansible-playbook  -u  your user -i inventories/_name_your_project_/infra.yaml --private-key=/path/your/key graylog_install.yaml
      ```
+       - **Zabbix-agent** - вручну встановити [Zabbix-agent](../manual-installation/10-mon-hub-install-and-settings.md#zabbix-agent)
 ---
 
 ## 🖥️ Довідник посилання для доступу до компонентів
