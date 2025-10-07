@@ -83,7 +83,7 @@
   
   <img width="675" alt="image" src="https://github.com/user-attachments/assets/6d453482-5acc-4d6d-a404-e451c3eb05e2" />
 
-9. **Перейти до дирикторії** через консоль з Ansible-playbook 
+9. **Перейти до директорії** через консоль з Ansible-playbook 
 
    ```bash
    cd t2_instal/
