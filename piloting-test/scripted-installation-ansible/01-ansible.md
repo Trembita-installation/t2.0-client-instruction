@@ -74,7 +74,12 @@
 > filebeat_id: "PROVIDED_BY_SUPPORT"
 > filebeat_api_key: "PROVIDED_BY_SUPPORT"
 > #################################
+> ######### MON_ZAB ###############
+> zabbix_org: "PROVIDED_BY_SUPPORT"
+> zabbix_psk: "PROVIDED_BY_SUPPORT"
+> #################################
 > ```
+
 
 > ⚠️ **Увага!** Підтримується зміна імен юзерів, окрім юзера для **SS**
   
