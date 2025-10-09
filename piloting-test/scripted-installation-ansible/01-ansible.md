@@ -15,6 +15,7 @@
 - **Graylog**
 - **Zabbix**
 - **FILEBEAT (для MonHub рішення)**
+- **Zabbix Agent2 (для MonHub рішення)**
 
 ## ⚠️ Компоненти, які встановлюються вручну:
 
@@ -105,12 +106,12 @@
 
 12. **Встановити компоненти** в наступній послідовності:
 
-  - **FILEBEAT для (MonHub)**
+  - **FILEBEAT для MonHub рішення**
      ```bash
      ansible-playbook  -u  your user -i inventories/_name_your_project_/infra.yaml --private-key=/path/your/key filebeat_install.yaml
      ```
 
-  - **Zabbix Agent2 для (MonHub)**
+  - **Zabbix Agent2 для MonHub рішення**
      ```bash
      ansible-playbook  -u  your user -i inventories/_name_your_project_/infra.yaml --private-key=/path/your/key mon_zabbix.yaml
      ```
