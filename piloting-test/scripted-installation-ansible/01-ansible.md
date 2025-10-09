@@ -110,7 +110,7 @@
      ansible-playbook  -u  your user -i inventories/_name_your_project_/infra.yaml --private-key=/path/your/key filebeat_install.yaml
      ```
 
-- **Zabbix Agent2 для (MonHub)**
+  - **Zabbix Agent2 для (MonHub)**
      ```bash
      ansible-playbook  -u  your user -i inventories/_name_your_project_/infra.yaml --private-key=/path/your/key mon_zabbix.yaml
      ```
