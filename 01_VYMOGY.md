@@ -8,7 +8,9 @@
 
 - **Платформа:**  
   - Ubuntu **22.04** — для основних компонентів системи Трембіта
+  https://project-repo.trembita.gov.ua:8081/files/t2/ubuntu-22.04.5-live-server-amd64.iso<br>
   - Ubuntu **22.04** desktop - для АдмінСтанції
+  https://project-repo.trembita.gov.ua:8081/files/t2/ubuntu-22.04.5-desktop-amd64.iso<br>
   - Windows **10/11** desktop - для АдмінСтанції
   - Ubuntu **20.04** — для локального компонента ПМДПД
 
