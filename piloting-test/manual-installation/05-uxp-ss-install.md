@@ -200,6 +200,21 @@ sudo systemctl status uxp-*
 > ```bash
 > sudo uxp-integrity stop
 > ```
+> 
+> • Запуск контрольованих сервісів після паузи:
+> ```bash
+> sudo uxp-integrity start
+> ```
+> 
+> • Створення/оновлення хешу баз(и) даних AIDE:
+> ```bash
+> sudo uxp-integrity update
+> ```
+> 
+> • Запуск перевірки цілісності (у разі помилки всі служби будуть зупинені):
+> ```bash
+> sudo uxp-integrity check
+> ```
 
 <br>
 
