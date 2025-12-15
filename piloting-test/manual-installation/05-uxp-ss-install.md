@@ -181,7 +181,7 @@ sudo systemctl status uxp-*
 > sudo uxp-integrity update && sudo uxp-integrity check && sudo uxp-integrity start
 > ```
 > 
-> > • Призупинення роботи Контролера цілісності на 30 хвилин (результати перевірки check будуть ігноруватися):
+>  • Призупинення роботи Контролера цілісності на 30 хвилин (результати перевірки check будуть ігноруватися):
 > ```bash
 > sudo uxp-integrity pause
 > ```
