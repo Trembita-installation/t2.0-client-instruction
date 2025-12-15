@@ -179,10 +179,9 @@ sudo systemctl status uxp-*
 >
 > Запуск контрольованих сервісів (у випадку їх призупинення контролером цілісності)
 > ```bash
-> sudo uxp-integrity update
-> sudo uxp-integrity check
-> sudo uxp-integrity start
+> sudo uxp-integrity update && sudo uxp-integrity check && sudo uxp-integrity start
 > ```
+> 
 > 
 > • Запуск перевірки цілісності (у разі помилки всі служби будуть зупинені):
 > ```bash
