@@ -181,7 +181,7 @@ sudo systemctl status uxp-*
 > sudo uxp-integrity pause
 > ```
 > 
-> Запуск контрольованих сервісів (у випадку їх призупинення контролером цілісності)
+> • Запуск контрольованих сервісів (у випадку їх призупинення контролером цілісності)
 > ```bash
 > sudo uxp-integrity update && sudo uxp-integrity check && sudo uxp-integrity start
 > ```
