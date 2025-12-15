@@ -206,7 +206,7 @@ sudo systemctl status uxp-*
 > sudo uxp-integrity stop
 > ```
 > 
-> • Запуск контрольованих сервісів після паузи:
+> • Запуск контрольованих сервісів (також запустяться всі сервіси, з активним статусом pause):
 > ```bash
 > sudo uxp-integrity start
 > ```
