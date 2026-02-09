@@ -165,7 +165,7 @@
 - **MinIO**
 
      ```bash
-     https://<security-server>:2001
+     https://<security-server>:9001
      ```
 
 > 🔐 **Примітка** <br>
