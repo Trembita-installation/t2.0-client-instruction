@@ -165,7 +165,7 @@
 - **MinIO**
 
      ```bash
-     https://<security-server>:9001
+     https://<minio-server>:9001
      ```
 
 > 🔐 **Примітка** <br>
@@ -176,7 +176,7 @@
 - **Elasticsearch + Kibana**
 
      ```bash
-     https://<security-server>:5601
+     https://ek-server>:5601
      ```
 > 🔐 **Примітка** <br>
 > Логін - `elastic` <br>
@@ -186,7 +186,7 @@
 - **Zabbix**
 
      ```bash
-     http://<security-server>:8080
+     http://<zabbix-server>:8080
      ```
 
 > 🔐 **Примітка** <br>
@@ -197,7 +197,7 @@
 - **Graylog**
     
      ```bash
-     https://<graylog-server-address>
+     https://<graylog-server>
      ```
 
 > 🔐 **Примітка** <br>
