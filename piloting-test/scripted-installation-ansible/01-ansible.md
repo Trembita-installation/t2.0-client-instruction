@@ -176,7 +176,7 @@
 - **Elasticsearch + Kibana**
 
      ```bash
-     https://ek-server>:5601
+     https://<ek-server>:5601
      ```
 > 🔐 **Примітка** <br>
 > Логін - `elastic` <br>
