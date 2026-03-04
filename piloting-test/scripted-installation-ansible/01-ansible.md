@@ -128,7 +128,7 @@
      ```bash
      ansible-playbook  -u  your user -i inventories/_name_your_project_/infra.yaml --private-key=/path/your/key minio_install.yaml
      ```
-[Після встановлення MinIO перевірте даний параметр](../piloting-test/manual-installation/04-minio-install-and-settings.md#перевірка-параметра-archive-storage-type)
+[Після встановлення MinIO перевірте даний параметр](../manual-installation/04-minio-install-and-settings.md#перевірка-параметра-archive-storage-type)
 
   - **Elasticsearch + Kibana**
 
