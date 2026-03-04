@@ -128,7 +128,7 @@
      ```bash
      ansible-playbook  -u  your user -i inventories/_name_your_project_/infra.yaml --private-key=/path/your/key minio_install.yaml
      ```
-[Після встановлення MinIO перевірте даний параметр](../https://github.com/Trembita-installation/t2.0-client-instruction/blob/main/piloting-test/manual-installation/04-minio-install-and-settings.md#%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D1%96%D1%80%D0%BA%D0%B0-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B0-archive-storage-type)
+[Після встановлення MinIO перевірте даний параметр](../piloting-test/manual-installation/04-minio-install-and-settings.md#перевірка-параметра-archive-storage-type)
 
   - **Elasticsearch + Kibana**
 
