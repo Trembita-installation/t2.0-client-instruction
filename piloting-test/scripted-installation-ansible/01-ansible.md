@@ -130,7 +130,6 @@
      ```
 [Після встановлення MinIO перевірте даний параметр](../manual-installation/04-minio-install-and-settings.md#%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D1%96%D1%80%D0%BA%D0%B0-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%B0-archive-storage-type)
 
-- https://github.com/Trembita-installation/t2.0-client-instruction/blob/main/piloting-test/manual-installation/
   - **Elasticsearch + Kibana**
 
      ```bash
