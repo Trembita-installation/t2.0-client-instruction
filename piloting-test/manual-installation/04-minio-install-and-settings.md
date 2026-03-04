@@ -468,12 +468,13 @@ trusted-certificate = /etc/uxp/ssl/minio.crt
 > **access-key / secret-key** — ключі раніше створеного сервісного користувача <br>
 > **trusted-certificate** — шлях до TLS-сертифікату (наприклад /home/minio-user/.minio/certs/public.crt) Скопіюйте файл відповідного сертифікату на ШБО
 
-Перевірте чи присутній параметр **archive-storage-type** із значенням **fs** в блоку **message-log**: <br>
-Якщо присутній то змініть значення archive-storage-type із **fs** на значення **s3**
-```bash
-[message-log]
-archive-storage-type = s3
-```
+> **Перевірка:**
+> Перевірте чи присутній параметр **archive-storage-type** із значенням **fs** в блоку **message-log**: <br>
+> Якщо присутній то змініть значення archive-storage-type із **fs** на значення **s3**
+> ```bash
+> [message-log]
+> archive-storage-type = s3
+> ```
 
 3. Оновіть контрольні хеші для перевірки цілісності::
 
