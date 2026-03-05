@@ -116,6 +116,16 @@
      ```bash
      ansible-playbook  -u  your user -i inventories/_name_your_project_/infra.yaml --private-key=/path/your/key mon_zabbix.yaml
      ```
+> ⚠️ Перш ніж встановлювати, будь ласка, перевірте мережеві налаштування на сервері. Для коректного встановлення необхідно, щоб було налаштоване повне доменне ім’я (FQDN).
+> 
+> ```bash
+> hostname -A
+> ```
+> Якщо результат виконання команди не співпадає з очікуваним FQDN, будь ласка, налаштуйте назву хосту за допомогою команди:
+> 
+> ```bash
+> sudo hostnamectl set-hostname <your-hostname>
+> ```
 
   - **UXP Security Server (ШБО)**
 
