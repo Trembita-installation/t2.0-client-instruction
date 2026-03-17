@@ -306,7 +306,7 @@ scheme = https
 ca-cert-file = /etc/uxp/ssl/http_ca.crt
 username = uxp_pma
 password = <your-password>
-index = uxp-request
+index = uxp-request-%{yyyy.MM.dd}
 ```
 
 🔸 Пояснення ключових полів:
