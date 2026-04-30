@@ -73,7 +73,7 @@
 
 3. Перевірте [вимоги до середовища](piloting-test/manual-installation/01-env-components.md)
 
-4. Оберіть спосіб встановлення: [ручне](piloting-test/manual-installation) або [через Ansible](piloting-test/script-installation)
+4. Оберіть спосіб встановлення: [ручне](piloting-test/manual-installation) або [через Ansible](piloting-test/scripted-installation-ansible)
 
 5. Почніть інсталяцію відповідно до обраного способу
 
