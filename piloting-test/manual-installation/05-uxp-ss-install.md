@@ -151,7 +151,10 @@ sudo apt install uxp-securityserver-trembita
 1. Встановіть AIDE
 
 ```bash
-sudo apt install uxp-integrity-securityserver
+sudo apt install \
+libpam-modules=1.4.0-11ubuntu2.4 \
+libpam-modules-bin=1.4.0-11ubuntu2.4 \
+uxp-integrity-securityserver
 ```
 
 2. Поставте його на паузу:
