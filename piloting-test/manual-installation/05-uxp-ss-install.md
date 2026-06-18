@@ -68,7 +68,19 @@ echo 'deb https://project-repo.trembita.gov.ua:8081/repository/t2-stack-1.22.7/ 
 ```bash
 sudo apt update
 ```
-6. Встановіть ШБО
+6. Пониження версій пакетів:
+
+```bash
+sudo apt install --allow-downgrades --reinstall \
+gcc-12-base=12.3.0-1ubuntu1~22.04 \
+libstdc++6=12.3.0-1ubuntu1~22.04 \
+libgomp1=12.3.0-1ubuntu1~22.04 \
+libgcc-s1=12.3.0-1ubuntu1~22.04 \
+libatomic1=12.3.0-1ubuntu1~22.04
+```
+---
+
+6.1 Встановіть ШБО
 
 ```bash
 sudo apt install uxp-securityserver-trembita
