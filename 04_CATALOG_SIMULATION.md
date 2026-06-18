@@ -15,7 +15,7 @@
 | 7  | Державна податкова служба України                                                               | 43005393   |  53_DPS_DRFO <br> PDAMS_LC_01             | payerCredentials <br> taxAccounts <br> InfoRNOKPPDRFO   <br>  payerDecl <br> bankAccounts|
 | 8  | Державна служба України з лікарських засобів та контролю за наркотиками                         | 40517815   |                |             |
 | 9  | Державне підприємство "ДІЯ"                                                                     | 43395033   | MinInfra_Test_RPZM_prod <br> <br> MinInfra_Test_RPZM_cons <br> MinRegion_3DC_Test_EDESSB_cons <br> MinRegion_3DC_Test_EDESSB_prod | startBp <br> getInfo <br> srtartBp  <br> <br> <br>           |
-| 10 | Державне підприємство "ІНФОТЕХ"                                                                 | 34239034   | 20_MIA_cons <br> 20_MIA_prod <br> DeclarMTB <br> EDRTZ <br> 20_DMS_EDDR_prod|             |
+| 10 | Державне підприємство "ІНФОТЕХ"                                                                 | 34239034   | 20_MIA_cons <br> 20_MIA_prod <br> DeclarMTB <br> EDRTZ <br> 20_DMS_EDDR_prod <br> ERZ |             |
 | 11 | Державне підприємство "Лісогосподарський інноваційно-аналітичний центр"                         | 00994207   |                |             |
 | 12 | Державне підприємство "Науково-дослідний інститут геодезії і картографії"                       | 24102001   |                |             |
 | 13 | Державне підприємство "Поліграфічний комбінат "Україна" по виготовленню цінних паперів"         | 16286441   |                |             |
